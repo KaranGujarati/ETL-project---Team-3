@@ -38,10 +38,10 @@ CREATE TABLE "trending_youtube" (
 	"views" INT   ,
 	"likes" INT   ,
 	"dislikes" INT   ,
-	"comment_count" INT   L,
+	"comment_count" INT   ,
 	"thumbnail_link" VARCHAR   ,
 	"description" VARCHAR   ,
-    CONSTRAINT FOREIGN KEY (channel_title) REFERENCES channels(channel_title)
+    FOREIGN KEY (channel_title) REFERENCES channels(channel_title)
         
 );
 
@@ -59,7 +59,7 @@ CREATE TABLE "most_viewed_youtubers" (
 	"category" VARCHAR   ,
 	"country" VARCHAR   ,
 	"language" VARCHAR   ,
-	CONSTRAINT FOREIGN KEY (channel_title) REFERENCES channels(channel_title)
+	FOREIGN KEY (channel_title) REFERENCES channels(channel_title)
         
 );
 
@@ -72,12 +72,12 @@ DROP TABLE IF EXISTS "most_subscribed_channels";
 CREATE TABLE "most_subscribed_channels" (
     "rank" INT   ,
     "channel_title" VARCHAR   ,
-	"subscribers_in_millions" INT  
+	"subscribers_in_millions" INT  ,
 	"network" VARCHAR   ,
 	"language" VARCHAR   ,
 	"category" VARCHAR   ,
 	
-	CONSTRAINT FOREIGN KEY (channel_title) REFERENCES channels(channel_title)
+	FOREIGN KEY (channel_title) REFERENCES channels(channel_title)
         
 );
 
