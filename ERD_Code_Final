@@ -15,7 +15,7 @@ trending_youtube
 video_id  VARCHAR    
 trending_date  VARCHAR    
 title  VARCHAR    
-channel_title  VARCHAR    
+channel_title  VARCHAR  FK >- channels.channel_title  
 category_id  INTEGER  FK >- categories.category_id 
 publish_time  VARCHAR    
 tags  VARCHAR    
